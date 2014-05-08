@@ -10,7 +10,7 @@
 
 """This module exports the Cppcheck plugin class."""
 
-from SublimeLinter.lint import Linter, util
+from SublimeLinter.lint import Linter, util, highlight
 
 
 class Cppcheck(Linter):
@@ -28,5 +28,6 @@ class Cppcheck(Linter):
     }
     inline_settings = 'std'
     inline_overrides = 'enable'
+    default_type = highlight.WARNING
 
     comment_re = r'\s*/[/*]'
